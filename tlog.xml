@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <tlog name="gate_stat" version="1" comment="服务器状态" sharding="month">
+        <field name="gameid"        type="int(11)" comment="游戏id"/>
+        <field name="onlinenum"     type="int(11)" comment="在线人数"/>
+    </tlog>
+
+    <tlog name="user_login" version="1" comment="用户登录" sharding="month">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="logintime"     type="int(11)"      comment="登录时间"/>
+    </tlog>
+
+    <tlog name="user_login" version="2" comment="用户登录" sharding="month">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="openid"        type="bigint(11)"  comment="openid"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="logintime"     type="int(11)"      comment="登录时间"/>
+    </tlog>
+
+    <tlog name="user_logout" version="1" comment="用户登出" sharding="month">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="logintime"     type="int(11)"      comment="登录时间"/>
+        <field name="logouttime"    type="int(11)"      comment="登出时间"/>
+    </tlog>
+
+    <tlog name="user_logout" version="2" comment="用户登出" sharding="month">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="openid"        type="bigint(11)"  comment="openid"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="logintime"     type="int(11)"      comment="登录时间"/>
+        <field name="logouttime"    type="int(11)"      comment="登出时间"/>
+    </tlog>
+
+    <tlog name="user_register" version="1" comment="用户注册">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="openid"        type="bigint(11)"  comment="openid"/>
+        <field name="nickname"      type="varchar(128)" comment="昵称"/>
+        <field name="ip"            type="varchar(32)"  comment="注册ip"/>
+    </tlog>
+
+    <tlog name="user_register" version="2" comment="用户注册">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="openid"        type="bigint(11)"   comment="openid"/>
+        <field name="nickname"      type="varchar(128)" comment="昵称"/>
+        <field name="ip"            type="varchar(32)"  comment="注册ip"/>
+        <field name="registertime"  type="int(11)"      comment="平台注册时间"/>
+    </tlog>
+
+    <tlog name="round_start" version="1" comment="游戏开始" sharding="month">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+    </tlog>
+
+    <tlog name="round_start" version="2" comment="游戏开始" sharding="month">
+        <field name="gameid"        type="int(11)"      comment="游戏id"/>
+        <field name="openid"        type="bigint(11)"  comment="openid"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+    </tlog>
+
+    <tlog name="round_result" version="1" comment="游戏结束" sharding="month">
+        <field name="gameid"        type="int"          comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="starttime"     type="int(11)"      comment="开始时间"/>
+        <field name="resulttime"    type="int(11)"      comment="结束时间"/>
+        <field name="score"         type="bigint(11)"   comment="分数"/>
+        <field name="medal"         type="bigint(11)"   comment="大西瓜"/>
+    </tlog>
+
+    <tlog name="round_result" version="2" comment="游戏结束" sharding="month">
+        <field name="gameid"        type="int"          comment="游戏id"/>
+        <field name="openid"        type="bigint(11)"  comment="openid"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="starttime"     type="int(11)"      comment="开始时间"/>
+        <field name="resulttime"    type="int(11)"      comment="结束时间"/>
+        <field name="score"         type="bigint(11)"   comment="分数"/>
+        <field name="medal"         type="bigint(11)"   comment="大西瓜"/>
+    </tlog>
+
+    <tlog name="round_share" version="1" comment="游戏分享" sharding="month">
+        <field name="gameid"        type="int"          comment="游戏id"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="type"        type="int(11)"   comment="分享类型"/>
+    </tlog>
+   
+    <tlog name="round_share" version="2" comment="游戏分享" sharding="month">
+        <field name="gameid"        type="int"          comment="游戏id"/>
+        <field name="openid"        type="bigint(11)"  comment="openid"/>
+        <field name="userid"        type="bigint(11)"   comment="用户id"/>
+        <field name="type"        type="int(11)"   comment="分享类型"/>
+    </tlog>
+</xml>
