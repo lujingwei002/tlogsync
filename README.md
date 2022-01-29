@@ -5,10 +5,11 @@
 2. 根据XML描述文件自动建表，自动新建字段
 
 ## 日志文件格式
+```bash
+服务名字_tlog_时间.log
+```
 
-{服务名字}_tlog_{时间}.log
-
-## xml文件格式
+## xml描述文件格式
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
